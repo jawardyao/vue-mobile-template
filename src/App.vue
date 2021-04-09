@@ -6,7 +6,8 @@
 
 <script>
 import wx from 'weixin-js-sdk';
-import { mapState, mapActions } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+const { mapState, mapActions } = createNamespacedHelpers('global');
 
 import { userLoginDetail } from '@/api/login';
 import { TokenHelper } from '@/utils/helper';
@@ -20,11 +21,11 @@ export default {
   },
   computed: {
     ...mapState({
-      loginUser: (state) => state.global.loginUser,
+      loginUser: (state) => state.loginUser,
     }),
   },
   methods: {
-    ...mapActions(['global/setLoginUser']),
+    ...mapActions(['setLoginUser']),
     getLoginUser() {
       const userId = TokenHelper.getUserId();
       const hasAuthedFlag = localStorage.getItem(__WX_HAS_AUTHED__);
@@ -34,10 +35,11 @@ export default {
           redirectUri: encodeURIComponent(location.origin + '/'),
         }).then((res) => {
           const { data } = res;
-          this.$store.dispatch({
-            type: 'global/setLoginUser',
-            payload: data,
-          });
+          this.setLoginUser({ payload: data });
+          // this.$store.dispatch({
+          //   type: 'global/setLoginUser',
+          //   payload: data,
+          // });
           if (isWx && data.authUrl) {
             localStorage.setItem(__WX_HAS_AUTHED__, 1);
             window.location.replace(data.authUrl);
