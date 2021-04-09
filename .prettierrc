@@ -1,0 +1,19 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": false,
+  "semi": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "printWidth": 80,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}

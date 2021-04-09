@@ -1,0 +1,75 @@
+import Vue from 'vue';
+import {
+  Sticky,
+  Button,
+  Form,
+  Field,
+  CellGroup,
+  Cell,
+  DatetimePicker,
+  Popup,
+  CountDown,
+  NavBar,
+  List,
+  Card,
+  Collapse,
+  CollapseItem,
+  Uploader,
+  Search,
+  PullRefresh,
+  Checkbox,
+  RadioGroup,
+  Radio,
+  Tabs,
+  Tab,
+  Row,
+  Col,
+  Icon,
+  Calendar,
+  Tag,
+  Grid,
+  GridItem,
+  Dialog,
+  Picker,
+  Image,
+  Cascader,
+  ImagePreview,
+  Empty,
+} from 'vant';
+
+Vue.use(Button);
+Vue.use(Form);
+Vue.use(Field);
+Vue.use(CellGroup);
+Vue.use(Cell);
+Vue.use(DatetimePicker);
+Vue.use(Popup);
+Vue.use(CountDown);
+Vue.use(NavBar);
+Vue.use(List);
+Vue.use(Card);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
+Vue.use(Uploader);
+Vue.use(PullRefresh);
+Vue.use(Checkbox);
+Vue.use(RadioGroup);
+Vue.use(Radio);
+Vue.use(Picker);
+Vue.use(Tabs);
+Vue.use(Tab);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Search);
+Vue.use(Icon);
+Vue.use(Calendar);
+Vue.use(Tag);
+Vue.use(Grid);
+Vue.use(GridItem);
+Vue.use(Dialog);
+Vue.use(Picker);
+Vue.use(Sticky);
+Vue.use(Image);
+Vue.use(Cascader);
+Vue.use(ImagePreview);
+Vue.use(Empty);
