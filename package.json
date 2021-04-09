@@ -48,6 +48,12 @@
     "prettier": "^2.0.5",
     "vue-template-compiler": "^2.6.11"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "**/*.{js,jsx,less,md,json}": [
       "prettier --write",
